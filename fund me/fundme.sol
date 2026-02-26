@@ -37,7 +37,7 @@ contract FundMe {
             addressToAmountFunded[funder] = 0;
         }
         funders = new address[](0);
-        (bool callsuccess, ) = payable(msg.sender).call{value: address(this).blalance}("");
+        (bool callsuccess, ) = payable(msg.sender).call{value: address(this).balance}("");
         require(callsuccess, "call failed");
     }
 }
